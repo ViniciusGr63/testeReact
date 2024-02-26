@@ -1,13 +1,17 @@
 .home{
-background-color: black;
+    background-color: blue;
 height: 800px;
 }
 .pag1{
-background-color: blueviolet;
+background-color: #455bdb;
 height: 800px;
 }
 
 .pag2{
 background-color: blue;
 height: 800px;
+}
+p{
+    margin: 0;
+    color: rgb(255, 255, 255);
 }
