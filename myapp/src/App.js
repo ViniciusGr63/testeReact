@@ -1,27 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Frase from './components/Frase';
-import Logo from './components/Logo';
-import Ola  from './components/Ola';
+import Home from './components/pages/Home';
+import Pag1 from './components/pages/Pag1';
+import Pag2 from './components/pages/Pag2';
+
+//import Frase from './components/Frase';
+import Nav from './components/layout/Nav';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+
+import {BrowserRouter as Router ,Route,Routes, Link } from "react-router-dom" 
+  
 
 function App() {
-  const nome = "Logo React";
-  const ft = 'https://www.iteachrecruiters.com/img/blog/logo/react-native.png';
+  
   return (
     <div className="App">
-      <header >
-        <Frase/>
-        <Logo/>
-        
-      </header>
-      <body>
-
-      <Ola 
-      foto = {ft}
-      title={nome} />
-       
+     <Router>
+      <Header/>
       
-      </body>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/Pag1" element={<Pag1/>}/>
+        <Route exact path="/Pag2" element={<Pag2/>}/>
+      </Routes>
+      <Footer/>
+     </Router>
     </div>
   );
 }
